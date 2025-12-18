@@ -86,7 +86,7 @@ void cpuVer(float *A, float *B, float *C, int n, int nt){
 
     double t1 = omp_get_wtime();    // tomar tiempo al terminar
 
-    printf("Tiempo de computo para CPU: %f segundos \n", t1 - t0);
+    printf("Tiempo de computo para CPU: %f segundos. \n", t1 - t0);
 }
 
 void gpuVer(float *A, float *B, float *C, int n){
@@ -117,8 +117,9 @@ void gpuVer(float *A, float *B, float *C, int n){
 
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);             // calculo de tiempo
+    ms /= 1000;
 
-    printf("Tiempo de computo para GPU: %f ms \n", ms);
+    printf("Tiempo de computo para GPU: %f segundos. \n", ms);
 
     cudaMemcpy(C, dC, bytes, cudaMemcpyDeviceToHost);   // copiar resultado en C
 
@@ -156,8 +157,9 @@ void gpusmVer(float *A, float *B, float *C, int n){    // esencialmente igual a 
 
     float ms = 0.0f;
     cudaEventElapsedTime(&ms, start, stop);        
+    ms /= 1000;
 
-    printf("Tiempo de computo para GPUsm: %f ms \n", ms);
+    printf("Tiempo de computo para GPUsm: %f segundos. \n", ms);
 
     cudaMemcpy(C, dC, bytes, cudaMemcpyDeviceToHost);  
 
