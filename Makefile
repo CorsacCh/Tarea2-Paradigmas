@@ -1,7 +1,7 @@
 OPT = -O3
-SOURCE =  matMulCompa.cu
+SOURCE = matMulCompa.cu
 BIN = prog
-FLAGS = -Xcompiler
+FLAGS = -Xcompiler -fopenmp
 
 all:
 	nvcc ${FLAGS} ${OPT} ${SOURCE} -o ${BIN}
