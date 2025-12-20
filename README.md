@@ -2,8 +2,8 @@
 ## MATMUL COMPA
 
 ## Integrantes
-- **Jorge Cheuquemán**
-- **Cristian Vera**
+- **Jorge Cheuquemán**.
+- **Cristian Vera**.
 
 ---
 
@@ -11,9 +11,7 @@
 
 Este proyecto compara **tres implementaciones** de la multiplicación de matrices cuadradas (N×N):
 
-\[
-A \times B = C
-\]
+A * B = C
 
 Implementaciones evaluadas:
 
