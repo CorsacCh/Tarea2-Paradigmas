@@ -130,7 +130,7 @@ Ejemplo:
 
 Este gráfico compara el **tiempo promedio de cómputo** de las tres implementaciones para distintos tamaños de matriz.
 
-[GRÁFICO TIEMPO VS TODOS]
+![Tiempo vs todos](https://github.com/user-attachments/assets/3be12780-d7e5-4428-b1af-5e3b40876bc2)
 
 ### Ejes
 - **Eje X:** N (potencias de 2)
@@ -176,7 +176,7 @@ Ejemplo:
 
 ### Gráfico 1: CPU — % Speedup vs N (líneas por nt)
 
-[GRÁFICO CPUT]
+![Speedup cpu-threads](https://github.com/user-attachments/assets/e8cf75c0-c78e-478a-b8b9-9b11f5a56829)
 
 Compara la versión CPU multicore usando distintos números de hilos (`nt = 2, 4, 6, 8, 12`) contra una versión secuencial.
 
@@ -193,7 +193,7 @@ En matrices grandes, **OpenMP aprovecha mejor el CPU** al usar más hilos.
 
 ### Gráfico 2: GPU — % Speedup vs N (GPU y GPUsm)
 
-[GRAFICO GPUGPUSM]
+![Speedup gpu y gpusm](https://github.com/user-attachments/assets/07068732-435e-4083-9467-cf574453b662)
 
 Compara dos implementaciones en GPU:
 
@@ -221,4 +221,4 @@ En matrices grandes, la **GPU entrega el mayor speedup**, y el uso de **shared m
 
 ## Resultados finales de Speedup
 
-[tabla]
+![tabla](https://github.com/user-attachments/assets/893839b0-7e34-4425-89db-c6a2f77f5845)
