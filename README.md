@@ -120,7 +120,7 @@ En esta tarea se generaron gráficos que muestran cómo varía el rendimiento al
 `N` corresponde a la dimensión de la matriz cuadrada.
 
 Ejemplo:  
-- `N = 256` ⇒ multiplicación de matrices **256 × 256**
+- `N = 256` ⇒ multiplicación de matrices **256 × 256**.
 
 ---
 
@@ -158,14 +158,19 @@ La **GPU** ofrece el mejor rendimiento al aumentar `N`, y el uso de **shared mem
 
 ### Fórmula utilizada
 
-\[
-\%speedup = \frac{T_{seq}}{T_{par}}
-\]
+%speedup = (T_seq / T_par) * 100
 
 Donde:
 
-- `T_seq`: tiempo de la versión secuencial  
-- `T_par`: tiempo de la versión paralela  
+- `T_seq`: Tiempo de la versión secuencial.  
+- `T_par`: Tiempo de la versión paralela.
+
+Es decir, se compara cada tiempo de cómputo con el algoritmo secuencial, de lo que sale un porcentaje de eficiencia del algoritmo secuencial corre el algoritmo comparado.
+
+Ejemplo:
+- `9%` ⇒ El algoritmo comparado se ejecuta a un **9%** de la potencia del algoritmo secuencial. O sea, es un 91% más lento.
+- `100%` ⇒ El algoritmo comparado tiene el mismo tiempo de cómputo que el algoritmo secuencial.
+- `190%` ⇒ El tiempo de cómputo del algoritmo comparado fue un 90% más rápido.
 
 ---
 
@@ -187,6 +192,8 @@ En matrices grandes, **OpenMP aprovecha mejor el CPU** al usar más hilos.
 ---
 
 ### Gráfico 2: GPU — % Speedup vs N (GPU y GPUsm)
+
+[GRAFICO GPUGPUSM]
 
 Compara dos implementaciones en GPU:
 
@@ -211,3 +218,7 @@ En matrices grandes, la **GPU entrega el mayor speedup**, y el uso de **shared m
 
 - Para **N pequeños**, el rendimiento está dominado por overhead (threads y kernels).
 - Para **N grandes**, **GPUsm** tiende a mejorar consistentemente gracias a la reutilización de datos en shared memory.
+
+## Resultados finales de Speedup
+
+[tabla]
