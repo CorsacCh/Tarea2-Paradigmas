@@ -172,7 +172,7 @@ void gpusmVer(float *A, float *B, float *C, int n){    // esencialmente igual a 
 
 // Definicion de funciones extra
 void imprMatriz(float *A, int n, const char *msg){
-    if(n > 40) return;
+    if(n > 10) return;
 
     printf("%s: \n", msg);
 
@@ -195,6 +195,7 @@ void llenaMatriz(float *A, int n){
     }
 }
 
+// Main
 int main(int argc, char **argv){
     // 1. Entrada y argumentos
 
